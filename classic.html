@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shingo Kawamura · Textile, CMF &amp; 3D</title>
+<meta name="description" content="[PLACEHOLDER] Portfolio of Shingo Kawamura: textile design, CMF and 3D visualization.">
+<!-- ALL TEXT IN THIS FILE IS PLACEHOLDER COPY. Replace before publishing. -->
+<!-- TYPE ROLES: Futura Bold = oversize decorative/key words only · DIN Condensed = everything else (headers in several sizes, body, name) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500&family=Jost:wght@700&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body id="top">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-word" aria-hidden="true">LMNOPQR</div>
+
+  <header class="site-header">
+    <a class="brand" href="#top">Shingo Kawamura</a>
+    <nav class="nav" aria-label="Main">
+      <a href="#work">Work</a>
+      <a href="#process">Process</a>
+      <a href="#access">Request access</a>
+    </nav>
+  </header>
+
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <h1 class="title title--hero">Full Stack Textile Designer</h1>
+      <p class="lede">Placeholder — Copy </p>
+      <a class="btn" href="#access">Request portfolio access</a>
+    </div>
+  </div>
+</section>
+
+<!-- WORK -->
+<section class="section" id="work">
+  <div class="wrap">
+    <h2 class="title">Selected work</h2>
+
+    <div class="grid">
+      <div class="col">
+        <figure class="tile">
+          <div class="art art--dots" aria-hidden="true"></div>
+          <figcaption>Dot-matrix knit study</figcaption>
+        </figure>
+        <figure class="tile">
+          <div class="art art--disc" aria-hidden="true"></div>
+          <figcaption>Metal disc, brushed</figcaption>
+        </figure>
+      </div>
+
+      <div class="col col--drop-lg">
+        <figure class="tile">
+          <div class="art art--feature">
+            <h3>INSERT</h3>
+            <p>Plover Marbled Patterns</p>
+          </div>
+          <figcaption>Pattern series</figcaption>
+        </figure>
+        <figure class="tile">
+          <div class="art art--strands" aria-hidden="true"></div>
+          <figcaption>Strand direction study</figcaption>
+        </figure>
+      </div>
+
+      <div class="col col--drop-sm">
+        <figure class="tile">
+          <div class="art art--fiber" aria-hidden="true"></div>
+          <figcaption>Fiber plane</figcaption>
+        </figure>
+        <figure class="tile">
+          <div class="art art--jersey" aria-hidden="true"></div>
+          <figcaption>Yarn-level jersey</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="section" id="process">
+  <div class="wrap">
+    <h2 class="title">One process, yarn to interior</h2>
+    <div class="steps">
+      <div class="step">
+        <h3>Yarn</h3>
+        <p>Fiber, denier and structure, visualized strand by strand.</p>
+      </div>
+      <div class="step">
+        <h3>Textile</h3>
+        <p>Knit and woven constructions engineered for form and light.</p>
+      </div>
+      <div class="step">
+        <h3>Interior</h3>
+        <p>Cut, trim and finish, judged in the space it will live in.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REQUEST ACCESS -->
+<section class="section section--access" id="access">
+  <div class="wrap access">
+    <div class="access-copy">
+      <h2 class="title title--inline">Request access</h2>
+      <p class="lede">Full case studies, material data and process files are shared on request.</p>
+    </div>
+
+    <!-- FORM: handled by Netlify Forms. Submissions are emailed to the address set in Netlify (Site configuration > Forms > Form notifications). -->
+    <form class="form" name="request-access" method="POST" action="/thanks.html" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="request-access">
+      <p hidden><label>Leave this empty: <input name="bot-field"></label></p>
+      <div class="field">
+        <label for="f-name">Name</label>
+        <input id="f-name" name="name" type="text" autocomplete="name">
+      </div>
+      <div class="field">
+        <label for="f-email">Email</label>
+        <input id="f-email" name="email" type="email" autocomplete="email" required>
+      </div>
+      <div class="field">
+        <label for="f-co">Company or studio</label>
+        <input id="f-co" name="company" type="text" autocomplete="organization">
+      </div>
+      <div class="field">
+        <label for="f-need">I would like</label>
+        <select id="f-need" name="request">
+          <option>The full portfolio</option>
+          <option>Details on a specific project</option>
+          <option>Material and process data</option>
+          <option>To discuss a collaboration</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="f-msg">Message</label>
+        <textarea id="f-msg" name="message" rows="3"></textarea>
+      </div>
+      <button class="btn" type="submit">Send request</button>
+    </form>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <span><span class="name">Shingo Kawamura</span> · © 2026 · Textile · CMF · 3D</span>
+  <a href="#top">Back to top</a>
+</footer>
+
+</body>
+</html>

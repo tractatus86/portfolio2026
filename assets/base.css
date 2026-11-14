@@ -1,0 +1,45 @@
+:root{
+  --futura:'Futura','Jost',sans-serif;
+  --figtree:'Figtree','DM Sans',sans-serif;
+  --body:'Red Hat Text','Figtree',sans-serif;
+  --serif:'Mixta Pro','Mixta','DM Serif Display','Playfair Display',Georgia,serif;
+  --label:'DIN Alternate','DIN Condensed','Barlow Condensed',sans-serif;
+  --mono:'Letter Gothic Std','Overpass Mono','IBM Plex Mono',monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:#cfcfcf}
+body{font-family:var(--body);-webkit-font-smoothing:antialiased}
+.stage{padding:48px 0 120px;display:flex;flex-direction:column;align-items:center;gap:56px}
+.cap{font:700 12px var(--label);letter-spacing:.12em;text-transform:uppercase;color:#222;margin:0 0 8px}
+.zoomer{transform-origin:top left;flex:none}
+.board{position:relative;display:flex;box-shadow:0 18px 50px rgba(0,0,0,.28);background:#fff}
+.page{width:850px;height:1100px;position:relative;overflow:hidden;flex:none}
+.cover-only .board{width:850px}
+.futura{font-family:var(--futura);font-weight:700}
+.figtree{font-family:var(--figtree);font-weight:700}
+.mono{font-family:var(--mono)}
+.label{font-family:var(--label);font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+.serif{font-family:var(--serif);font-weight:700}
+.vert{writing-mode:vertical-rl;transform:rotate(180deg)}
+
+/* hidden until fit.js has scaled the pages (avoids a flash of the unscaled wide layout) */
+.stage{opacity:0}
+.fitted .stage{opacity:1;transition:opacity .2s}
+html,body{overflow-x:hidden}
+
+/* before fit.js runs the fixed-width pages must not widen the layout (phone browsers zoom out to fit wide content and stay zoomed out) */
+html:not(.fitted) .zoomer{position:absolute;left:-99999px;top:0}
+
+/* page viewer (booklet) */
+.vw{touch-action:manipulation;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;position:fixed;inset:0;z-index:100;background:rgba(10,10,10,.94);display:none;flex-direction:column}
+.vw.on{display:flex}
+.vw-bar{display:flex;align-items:center;justify-content:center;gap:clamp(8px,2vw,16px);padding:10px 10px calc(10px + env(safe-area-inset-bottom,0px));font:700 12px 'DIN Alternate','DIN Condensed',sans-serif;letter-spacing:.1em;color:#f2f2f0}
+.vw-bar button{all:unset;cursor:pointer;font:700 20px/1 'Figtree',sans-serif;padding:6px 12px;border:1.5px solid #f2f2f0;color:#f2f2f0}
+.vw-bar button:hover{background:#f2f2f0;color:#0a0a0a}
+.vw-bar [data-a=close]{margin-left:clamp(8px,2vw,24px)}.vw-bar [data-a=zoom]{font:700 13px/1 'DIN Alternate','DIN Condensed',sans-serif;letter-spacing:.08em;min-width:3.2em;text-align:center}
+.vw-n{font:12.5px 'Letter Gothic Std','Overpass Mono',monospace;opacity:.7;letter-spacing:0}
+.vw-box{flex:1;min-height:0;overflow:auto;display:flex;justify-content:safe center;align-items:center;-webkit-overflow-scrolling:touch}
+.vw-hold{position:relative;flex:none;box-shadow:0 10px 40px rgba(0,0,0,.5);background:#fff;margin:auto}
+.vw-page{cursor:default}
+.vw-open,.vw-open body{overflow:hidden}
+.vw-open .toidx{display:none}

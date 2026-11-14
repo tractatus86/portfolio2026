@@ -1,0 +1,104 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="robots" content="noindex"><meta name="description" content="Shingo Kawamura: textile and materials development. Portfolio, ideas and a making journal. Work in progress."><meta name="viewport" content="width=device-width,initial-scale=1"><title>Shoe material callout</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;700&family=Jost:wght@700&family=Red+Hat+Text:wght@400;500&family=Barlow+Condensed:wght@500;700&family=Overpass+Mono&family=Playfair+Display:wght@700&display=swap"><link rel="stylesheet" href="../assets/base.css"><style>
+:root{--pad:clamp(16px,3.4vw,56px);--gap:clamp(8px,1.1vw,20px);--fs:clamp(11px,.5vw + 9.5px,14px)}
+html{background:#0a0a0a}body{background:#0a0a0a;color:#f2f2f0;min-height:100vh;padding:var(--pad);max-width:1600px;margin-inline:auto}
+a{color:inherit}.top{display:flex;flex-wrap:wrap;gap:6px 16px;justify-content:space-between;font:700 12px var(--label);letter-spacing:.08em;text-transform:uppercase;margin-bottom:20px;opacity:.85}.top a{text-decoration:none}
+
+body{max-width:none}
+.top{position:sticky;top:0;z-index:5;background:#0a0a0acc;backdrop-filter:blur(6px);margin:calc(var(--pad)*-1) calc(var(--pad)*-1) 0;padding:calc(var(--pad)*.5) var(--pad)}
+.hero{margin-top:clamp(56px,12vw,200px)}.hero h1{margin-top:clamp(20px,3vw,48px)}.titleblock{margin-bottom:clamp(40px,6vw,96px)}
+.hero .l{font:700 clamp(120px,22vw,300px)/.8 var(--futura);letter-spacing:-.04em;color:transparent;-webkit-text-stroke:1.5px #f2f2f0}
+.hero h1{font:700 clamp(40px,6vw,84px)/.95 var(--figtree);letter-spacing:-.03em}
+.titleblock p.n{font:clamp(15px,.4vw + 13px,18px)/1.6 var(--body);opacity:.85;max-width:52ch}
+.meta{font:clamp(13px,.4vw + 11px,17px)/1.5 var(--mono);opacity:.7;margin:clamp(20px,2.4vw,36px) 0 clamp(24px,3vw,48px)}
+.meta div{font:var(--fs)/1.3 var(--mono)}.meta b{display:block;font:700 var(--fs) var(--label);text-transform:uppercase;letter-spacing:.08em;opacity:.6;margin-bottom:4px}
+.heroimg{width:100%;max-width:100svh;aspect-ratio:21/9;object-fit:cover;display:block;margin-inline:0}
+.body{display:grid;grid-template-columns:[full-start text-start wide-start] minmax(0,68ch) [text-end] minmax(0,1fr) [wide-end full-end];margin-top:clamp(56px,9vw,140px);row-gap:clamp(40px,6vw,104px)}
+.body>*{grid-column:text}
+.body>.wide{grid-column:wide-start/wide-end}
+.body>.near{max-width:100svh;justify-self:start;width:100%}
+.body>.full{grid-column:full;margin-inline:calc(var(--pad)*-1)}.body>.full figcaption{padding:0 var(--pad)}
+.lead{font:700 clamp(20px,1.6vw + 14px,38px)/1.25 var(--figtree);letter-spacing:-.01em}
+.tx h2{font:700 clamp(18px,1vw + 14px,28px)/1.15 var(--serif);margin-bottom:.7em}
+.tx p{font:clamp(15px,.4vw + 13px,18px)/1.6 var(--body);opacity:.88}
+figure img{width:100%;display:block;object-fit:cover;background:#161616}
+figure.blend img{mix-blend-mode:multiply;background:transparent}
+figure.blend{background:#f3f5f4}figure.blend figcaption{color:#161616;opacity:.7;padding:0 0 8px}
+figcaption,.cap{font:700 clamp(10px,.3vw + 9px,13px)/1.3 var(--label);text-transform:uppercase;letter-spacing:.06em;margin-top:8px;opacity:.8}
+.pair{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:var(--gap)}
+.pair img{aspect-ratio:4/5}
+.mlist{font:clamp(14px,.5vw + 12px,19px)/1.6 var(--mono);white-space:pre-line;padding:14px 0;columns:2 220px;column-gap:var(--gap)}
+.quote{font:700 clamp(26px,3.4vw + 8px,64px)/1.05 var(--serif);letter-spacing:-.01em;color:#dc6e5e}
+.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,clamp(120px,16vw,240px)),1fr));gap:calc(var(--gap)/2)}
+.gal img{aspect-ratio:1;cursor:zoom-in;transition:opacity .15s}.gal img:hover{opacity:.8}
+.rel{margin-top:clamp(96px,14vw,240px);padding-bottom:clamp(48px,8vw,120px);display:flex;flex-wrap:wrap;gap:var(--gap)}
+.rel a{font:700 clamp(18px,1.4vw + 10px,32px)/1 var(--figtree);text-decoration:none;letter-spacing:-.01em}.rel a:hover{color:#dc6e5e}
+.rel span{font:700 var(--fs) var(--label);text-transform:uppercase;letter-spacing:.08em;opacity:.6;width:100%}
+.lb{position:fixed;inset:0;background:#000e;display:none;align-items:center;justify-content:center;z-index:20;cursor:zoom-out;padding:var(--pad)}
+.lb.on{display:flex}.lb img{max-width:100%;max-height:100%;object-fit:contain}
+
+
+/* ---- scroll reveals ---- */
+.js .rv{opacity:0;transform:translateY(clamp(28px,5vw,80px));transition:opacity .9s cubic-bezier(.2,.6,.2,1),transform .9s cubic-bezier(.2,.6,.2,1);will-change:opacity,transform}
+.js .rv.in{opacity:1;transform:none}
+.js .rv-img{transition-duration:1.2s}
+.js .rv-q{transform:translateY(clamp(20px,3vw,48px))}
+@media(prefers-reduced-motion:reduce){.js:not(.force) .rv{transform:none!important;transition:opacity 1.2s ease}}
+/* ---- portfolio parts ---- */
+.part .pn{display:block;font:700 clamp(110px,20vw,300px)/.8 var(--futura);letter-spacing:-.04em;color:transparent;-webkit-text-stroke:1.5px #f2f2f0}
+.part h2{font:700 clamp(32px,5vw,84px)/.95 var(--figtree);letter-spacing:-.03em;margin:clamp(20px,3vw,48px) 0 0}
+.part p{font:clamp(15px,.4vw + 13px,18px)/1.6 var(--body);opacity:.85;max-width:52ch;margin-top:clamp(16px,2vw,32px)}
+.body>.part{margin-top:clamp(180px,50svh,560px);grid-column:wide-start/wide-end}
+.body>.part:first-of-type{margin-top:clamp(140px,40svh,420px)}
+.toc{display:flex;flex-direction:column;gap:clamp(4px,1vw,14px);grid-column:wide-start/wide-end;margin-top:clamp(40px,10svh,140px)}
+.toc a{display:flex;gap:clamp(16px,3vw,48px);align-items:baseline;font:700 clamp(24px,4.4vw,72px)/1.02 var(--figtree);letter-spacing:-.025em;text-decoration:none;opacity:.9}
+.toc a span{font:var(--fs) var(--mono);opacity:.5;letter-spacing:0;min-width:2.2em}
+.toc a:hover{color:#dc6e5e}
+/* ---- negative space ---- */
+.leadwrap{margin-bottom:clamp(72px,18svh,220px)}
+.leadwrap .lead{max-width:30ch}
+.body>.tx+figure,.body>.tx+div{margin-top:calc(clamp(56px,10svh,140px)*-1 + clamp(40px,8svh,96px))}
+.hero{margin-top:clamp(80px,22svh,300px)}
+.hero h1{margin-top:clamp(28px,4vw,64px)}
+.meta{margin:clamp(20px,2.4vw,36px) 0 clamp(20px,2.4vw,36px)}
+.titleblock{margin-bottom:clamp(64px,16svh,200px)}
+.titleblock p.n{max-width:44ch}
+.body{row-gap:clamp(56px,10svh,140px);margin-top:clamp(80px,16svh,240px)}
+.body>.tx{margin-top:clamp(96px,30svh,380px)}
+.body>.tx:first-child{margin-top:0}
+.tx .no{display:block;font:var(--fs)/1 var(--mono);opacity:.5;margin-bottom:clamp(16px,2vw,32px)}
+.tx p{max-width:58ch}
+.body>.lead{max-width:30ch;margin-top:clamp(40px,10svh,140px)}
+.body>.quote{grid-column:wide-start/wide-end;min-height:70svh;display:flex;align-items:center;max-width:none;margin-block:clamp(40px,12svh,160px);font-size:clamp(30px,5.6vw,96px);line-height:1}
+.body>.full{margin-block:clamp(72px,18svh,260px)}
+.body>.near{margin-block:clamp(24px,6svh,90px)}
+.body>.small{display:flex;flex-wrap:wrap;align-items:flex-end;gap:clamp(16px,2vw,40px);grid-column:wide-start/wide-end;margin-block:clamp(40px,10svh,140px)}
+.small img{width:clamp(150px,22vw,340px)}
+.small figcaption{flex:0 1 26ch;margin:0 0 4px;opacity:.65}
+.body>.mlist,.body>div:has(>.mlist){margin-block:clamp(24px,6svh,90px)}
+.gal{margin-top:clamp(24px,5svh,72px)}
+.body>figure.wide:has(.gal){margin-top:clamp(120px,30svh,380px)}
+.rel{margin-top:clamp(160px,40svh,520px)}
+@media(max-width:700px){.body>.quote{min-height:56svh;font-size:clamp(28px,9vw,48px)}.body>.tx{margin-top:clamp(72px,18svh,200px)}}
+.stub{margin-top:clamp(56px,12vw,200px);padding-bottom:clamp(48px,8vw,120px)}.stub .l{font:700 clamp(120px,22vw,300px)/.8 var(--futura);letter-spacing:-.04em;color:transparent;-webkit-text-stroke:1.5px #f2f2f0}
+.stub h1{font:700 clamp(40px,6vw,84px)/.95 var(--figtree);letter-spacing:-.03em;margin:clamp(20px,3vw,48px) 0 0}.stub p{max-width:52ch}
+.stub .m{font:var(--fs)/1.5 var(--mono);opacity:.7}.stub p{font:14px/1.6 var(--body);max-width:520px;margin-top:20px}
+
+</style></head><body><div class="top"><a href="../index.html">← A–Z index</a><span>Making journal · 2026-11-12</span></div><div class="hero"><div class="l">S</div><h1>Shoe material callout</h1></div><div class="meta">Making journal · 2026-11-12 · about 3 hours · Illustrator, Photoshop</div><div class="titleblock"><p class="n">Making a material callout page for a footwear mock: one product, twenty parts, and how each part is named.</p></div><div class="leadwrap"><p class="lead">A footwear mock is only as clear as its callouts. This entry follows how one product page went from a pasted shoe photo to a numbered material list.</p></div><img class="heroimg" src="../assets/tex-mesh.jpg" alt="Mesh close-up (placeholder)"><div class="body"><div class="tx"><span class="no">01</span><h2>Start from the product</h2><p>Placeholder paragraph. I cut the shoe from its background and set it on a pale panel. The panel carries the image; the list carries the information. Keeping them separate lets either one change without redrawing the other. Longer paragraphs wrap at a readable measure on any screen, and the text column never gets wider than about 65 characters.</p></div><figure class="wide near blend"><img src="../assets/shoe.png" alt="Shoe cutout" loading="lazy" style="aspect-ratio:16/10"><figcaption>Wide image. Fills the column and keeps its own proportions.</figcaption></figure><div class="tx"><span class="no">02</span><h2>Number every layer</h2><p>Placeholder paragraph. Each part gets a number before it gets a name. Numbers are stable; names change when a supplier changes. The list below is set in Letter Gothic so the numbers line up like a spec sheet.</p></div><div><div class="mlist">01.Spacer 1
+02.Spacer 2
+03.Spacer 3
+04.Thin liner
+05.Scrim
+06.Web Adhesive
+07.Non Woven
+08.Woven Tape 1</div><div class="cap">Part of the material list. Placeholder.</div></div><figure class="small"><img src="../assets/tex-fibre.jpg" alt="Fibre detail" loading="lazy" style="aspect-ratio:4/5"><figcaption>Small image. Sits alone with the caption beside it, and the rest of the row stays empty on purpose.</figcaption></figure><figure class="wide"><div class="pair"><div><img src="../assets/tex-fibre.jpg" alt="Fibre" loading="lazy"><figcaption>Fibre, close-up</figcaption></div><div><img src="../assets/tex-two.jpg" alt="Render" loading="lazy"><figcaption>Two-tone render</figcaption></div></div><figcaption>Two-up. Side by side on a wide window, stacked on a phone.</figcaption></figure><p class="quote wide">Numbers are stable. Names change when a supplier changes.</p><figure class="full"><img src="../assets/tex-stripe.jpg" alt="Stripe render" loading="lazy" style="aspect-ratio:21/9"><figcaption>Full-bleed image. Runs edge to edge of the window, outside the text column.</figcaption></figure><div class="tx"><span class="no">03</span><h2>What I would change</h2><p>Placeholder paragraph. A second pass would add the supplier and weight beside each number, and a cross-section so the order of the layers can be read at a glance.</p></div><figure class="wide"><div class="gal"><img src="../assets/tex-mesh.jpg" alt="1" loading="lazy"><img src="../assets/tex-fibre.jpg" alt="2" loading="lazy"><img src="../assets/tex-two.jpg" alt="3" loading="lazy"><img src="../assets/tex-stripe.jpg" alt="4" loading="lazy"><img src="../assets/tex-dark.jpg" alt="5" loading="lazy"><img src="../assets/tex-mesh.jpg" alt="6" loading="lazy"></div><figcaption>Gallery. Squares fill as many columns as fit; tap to enlarge.</figcaption></figure></div><div class=rel><span>Related</span><a href="pebble-typography.html">Pebble typography ↗</a><a href="font-selection.html">Font selection ↗</a></div><div class="lb" id="lb"><img alt=""></div><script>const lb=document.getElementById("lb");document.querySelectorAll(".gal img").forEach(i=>i.onclick=()=>{lb.firstChild.src=i.src;lb.classList.add("on")});lb.onclick=()=>lb.classList.remove("on");addEventListener("keydown",e=>e.key==="Escape"&&lb.classList.remove("on"))</script><script>
+(function(){document.documentElement.classList.add("js");if(/[?&]motion=1/.test(location.search))document.documentElement.classList.add("force");
+const sel=".hero .l,.hero h1,.meta,.titleblock .n,.leadwrap .lead,.heroimg,.body>*,.rel";
+const els=[...document.querySelectorAll(sel)];
+els.forEach(e=>{e.style.transition="none";e.classList.add("rv");if(e.matches(".heroimg,figure"))e.classList.add("rv-img");if(e.matches(".quote"))e.classList.add("rv-q")});
+if(!("IntersectionObserver" in window)){els.forEach(e=>e.classList.add("in"));return}
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add("in");io.unobserve(x.target)}}),{threshold:.12,rootMargin:"0px 0px -6% 0px"});
+// stagger the opening block
+els.slice(0,4).forEach((e,i)=>e.style.transitionDelay=(i*.12)+"s");
+els.forEach(e=>io.observe(e));requestAnimationFrame(()=>requestAnimationFrame(()=>els.forEach(e=>e.style.transition="")));
+})();
+</script></body></html>

@@ -1,153 +1,136 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Shingo Kawamura · Textile, CMF &amp; 3D</title>
-<meta name="description" content="[PLACEHOLDER] Portfolio of Shingo Kawamura: textile design, CMF and 3D visualization.">
-<!-- ALL TEXT IN THIS FILE IS PLACEHOLDER COPY. Replace before publishing. -->
-<!-- TYPE ROLES: Futura Bold = oversize decorative/key words only · DIN Condensed = everything else (headers in several sizes, body, name) -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500&family=Jost:wght@700&display=swap">
-<link rel="stylesheet" href="styles.css">
-</head>
-<body id="top">
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="robots" content="noindex"><meta name="description" content="Shingo Kawamura: textile and materials development. Portfolio, ideas and a making journal. Work in progress."><meta name="viewport" content="width=device-width,initial-scale=1"><title>Shingo Kawamura · Index</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;700&family=Jost:wght@700&family=Red+Hat+Text:wght@400;500&family=Barlow+Condensed:wght@500;700&family=Overpass+Mono&family=Playfair+Display:wght@700&display=swap"><link rel="stylesheet" href="assets/base.css"><style>
+:root{--pad:clamp(16px,3.4vw,56px);--gap:clamp(8px,1.1vw,20px);--fs:clamp(11px,.5vw + 9.5px,14px)}
+html{background:#0a0a0a}body{background:#0a0a0a;color:#f2f2f0;min-height:100vh;padding:var(--pad);max-width:1600px;margin-inline:auto}
+a{color:inherit}.top{display:flex;flex-wrap:wrap;gap:6px 16px;justify-content:space-between;font:700 12px var(--label);letter-spacing:.08em;text-transform:uppercase;margin-bottom:20px;opacity:.85}.top a{text-decoration:none}
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-word" aria-hidden="true">LMNOPQR</div>
+.nav{display:flex;gap:var(--gap);margin:0 0 calc(var(--gap)*2);flex-wrap:wrap}
+.nav button{all:unset;cursor:pointer;font:700 var(--fs) var(--label);letter-spacing:.08em;text-transform:uppercase;border:1.5px solid #f2f2f0;padding:.7em 1.1em}
+.nav button em{font:normal 12.5px var(--mono);opacity:.6;margin-left:6px}
+.nav button.on{background:#f2f2f0;color:#0a0a0a}
+.head h1{font:700 clamp(40px,7vw + 8px,120px)/.95 var(--figtree);letter-spacing:-.03em;margin-bottom:12px}
+.head p{font:var(--fs)/1.5 var(--body);opacity:.75;max-width:min(420px,100%);margin-bottom:calc(var(--gap)*1.5)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,clamp(150px,15vw,260px)),1fr));gap:var(--gap)}
+.t{container-type:inline-size;aspect-ratio:1;padding-top:2cqi;position:relative;display:flex;flex-direction:column;transition:opacity .15s}
+.t .b{font:700 44cqi/.8 var(--futura);letter-spacing:-.04em;text-decoration:none;margin-top:6cqi;transition:color .15s}
+.t{cursor:pointer}.t.off{cursor:default}.t:hover .b{color:#dc6e5e}.t:hover{background:#161616}.t:focus-within .b{color:#dc6e5e}
+.t.off{opacity:.28}.t.off .b{pointer-events:none;color:transparent;-webkit-text-stroke:1.5px #f2f2f0}
+.rs{margin-top:auto;padding-top:2cqi;display:flex;flex-direction:column;gap:1.2cqi;padding-bottom:1cqi}
+.r{display:flex;gap:2.5cqi;align-items:baseline;font:700 clamp(10px,6.2cqi,14px)/1.2 var(--label);text-transform:uppercase;letter-spacing:.05em}
+.r a{text-decoration:none}.r a:hover{color:#dc6e5e}.r em{margin-left:auto;white-space:nowrap;font:normal .95em var(--mono);opacity:.55}
+.r i{width:7px;height:7px;flex:none;background:#f2f2f0;display:inline-block}
+.r[data-s=ideas] i{background:#dc6e5e}.r[data-s=journal] i{background:none;border:1.5px solid #f2f2f0}
+body.f .r:not(.m){opacity:.25}body.f .r.m{opacity:1}
+.foot{margin-top:calc(var(--gap)*2);font:var(--fs) var(--mono);opacity:.6;display:flex;justify-content:space-between;flex-wrap:wrap;gap:var(--gap)}
 
-  <header class="site-header">
-    <a class="brand" href="#top">Shingo Kawamura</a>
-    <nav class="nav" aria-label="Main">
-      <a href="#work">Work</a>
-      <a href="#process">Process</a>
-      <a href="#access">Request access</a>
-    </nav>
-  </header>
 
-  <div class="hero-inner">
-    <div class="hero-copy">
-      <h1 class="title title--hero">Full Stack Textile Designer</h1>
-      <p class="lede">Placeholder — Copy </p>
-      <a class="btn" href="#access">Request portfolio access</a>
-    </div>
-  </div>
-</section>
-
-<!-- WORK -->
-<section class="section" id="work">
-  <div class="wrap">
-    <h2 class="title">Selected work</h2>
-
-    <div class="grid">
-      <div class="col">
-        <figure class="tile">
-          <div class="art art--dots" aria-hidden="true"></div>
-          <figcaption>Dot-matrix knit study</figcaption>
-        </figure>
-        <figure class="tile">
-          <div class="art art--disc" aria-hidden="true"></div>
-          <figcaption>Metal disc, brushed</figcaption>
-        </figure>
-      </div>
-
-      <div class="col col--drop-lg">
-        <figure class="tile">
-          <div class="art art--feature">
-            <h3>INSERT</h3>
-            <p>Plover Marbled Patterns</p>
-          </div>
-          <figcaption>Pattern series</figcaption>
-        </figure>
-        <figure class="tile">
-          <div class="art art--strands" aria-hidden="true"></div>
-          <figcaption>Strand direction study</figcaption>
-        </figure>
-      </div>
-
-      <div class="col col--drop-sm">
-        <figure class="tile">
-          <div class="art art--fiber" aria-hidden="true"></div>
-          <figcaption>Fiber plane</figcaption>
-        </figure>
-        <figure class="tile">
-          <div class="art art--jersey" aria-hidden="true"></div>
-          <figcaption>Yarn-level jersey</figcaption>
-        </figure>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PROCESS -->
-<section class="section" id="process">
-  <div class="wrap">
-    <h2 class="title">One process, yarn to interior</h2>
-    <div class="steps">
-      <div class="step">
-        <h3>Yarn</h3>
-        <p>Fiber, denier and structure, visualized strand by strand.</p>
-      </div>
-      <div class="step">
-        <h3>Textile</h3>
-        <p>Knit and woven constructions engineered for form and light.</p>
-      </div>
-      <div class="step">
-        <h3>Interior</h3>
-        <p>Cut, trim and finish, judged in the space it will live in.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- REQUEST ACCESS -->
-<section class="section section--access" id="access">
-  <div class="wrap access">
-    <div class="access-copy">
-      <h2 class="title title--inline">Request access</h2>
-      <p class="lede">Full case studies, material data and process files are shared on request.</p>
-    </div>
-
-    <!-- FORM: handled by Netlify Forms. Submissions are emailed to the address set in Netlify (Site configuration > Forms > Form notifications). -->
-    <form class="form" name="request-access" method="POST" action="/thanks.html" data-netlify="true" netlify-honeypot="bot-field">
-      <input type="hidden" name="form-name" value="request-access">
-      <p hidden><label>Leave this empty: <input name="bot-field"></label></p>
-      <div class="field">
-        <label for="f-name">Name</label>
-        <input id="f-name" name="name" type="text" autocomplete="name">
-      </div>
-      <div class="field">
-        <label for="f-email">Email</label>
-        <input id="f-email" name="email" type="email" autocomplete="email" required>
-      </div>
-      <div class="field">
-        <label for="f-co">Company or studio</label>
-        <input id="f-co" name="company" type="text" autocomplete="organization">
-      </div>
-      <div class="field">
-        <label for="f-need">I would like</label>
-        <select id="f-need" name="request">
-          <option>The full portfolio</option>
-          <option>Details on a specific project</option>
-          <option>Material and process data</option>
-          <option>To discuss a collaboration</option>
-        </select>
-      </div>
-      <div class="field">
-        <label for="f-msg">Message</label>
-        <textarea id="f-msg" name="message" rows="3"></textarea>
-      </div>
-      <button class="btn" type="submit">Send request</button>
-    </form>
-  </div>
-</section>
-
-<footer class="site-footer">
-  <span><span class="name">Shingo Kawamura</span> · © 2026 · Textile · CMF · 3D</span>
-  <a href="#top">Back to top</a>
-</footer>
-
-</body>
-</html>
+/* cave and oil lamp: tiles sit in the dark and are lit by the lamp (--p 0..1) */
+.t{--p:0;isolation:isolate}
+.t .b,.t .rs{opacity:calc(.3 + .7*var(--p))}
+.t .b{color:color-mix(in srgb,#ffd9a8 calc(var(--p)*100%),#f2f2f0)}
+.t:hover{background:transparent}
+.t:hover .b{color:#ffb35c}
+.t:focus-within .b,.t:focus-within .rs{opacity:1}
+.t.off .b,.t.off .rs{opacity:.35}
+@media(hover:none){.t .b,.t .rs{opacity:calc(.5 + .5*var(--p))}}
+/* filter: matches keep the normal cave look; everything else becomes a very dark grey outline */
+body.f .t:not(.has) .b{-webkit-text-fill-color:transparent;color:transparent;opacity:1;-webkit-text-stroke:1.5px color-mix(in srgb,#8a7560 calc(var(--p)*55%),#3a3a3a)}
+body.f .t:not(.has) .rs{opacity:.22}
+body.f .t.has .r:not(.m){opacity:.4}
+/* phones: one row per letter, big letter on the left, its entries on the right */
+@media(max-width:560px){.grid{grid-template-columns:1fr;gap:clamp(4px,2vw,12px)}
+.t{aspect-ratio:auto;flex-direction:row;align-items:center;gap:6cqi;min-height:clamp(112px,32vw,160px);padding-top:0}
+.t .b{font-size:29cqi;margin:0;flex:none;width:36cqi}
+.t .rs{margin:0;padding:0;flex:1;min-width:0;justify-content:center;gap:2.2cqi}
+.r{font-size:clamp(11px,3.8cqi,15px)}}
+#fx{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:30}
+</style></head><body>
+<div class="top"><span>Shingo Kawamura</span><span>Textile and materials development</span></div>
+<div class="head"><h1>Index,<br>A to Z</h1><p>Portfolio, ideas and concepts, and a making journal. Pick a letter, or filter by kind.</p></div>
+<div class="nav"><button data-s="all" class="on">All <em>33</em></button><button data-s="portfolio">Portfolio <em>27</em></button><button data-s="ideas">Ideas and concepts <em>3</em></button><button data-s="journal">Making journal <em>3</em></button><button onclick="location.href='booklet.html'">Read the booklet ↘</button><button onclick="location.href='classic.html#access'">Request access</button></div>
+<div class="grid">
+<div class="t"><a class="b" href="booklet.html#p14" tabindex="-1">A</a><div class="rs"><span class="r" data-s="portfolio"><i></i><a href="booklet.html#p14">Archive</a><em>p.14</em></span></div></div>
+<div class="t"><a class="b" href="booklet.html#p8" tabindex="-1">B</a><div class="rs"><span class="r" data-s="portfolio"><i></i><a href="booklet.html#p8">Bonded stack</a><em>p.08</em></span></div></div>
+<div class="t"><a class="b" href="booklet.html#p4" tabindex="-1">C</a><div class="rs"><span class="r" data-s="portfolio"><i></i><a href="booklet.html#p4">Concept</a><em>p.04</em></span></div></div>
+<div class="t"><a class="b" href="booklet.html#p16" tabindex="-1">D</a><div class="rs"><span class="r" data-s="portfolio"><i></i><a href="booklet.html#p16">Dyed</a><em>p.16</em></span></div></div>
+<div class="t"><a class="b" href="booklet.html#p8" tabindex="-1">E</a><div class="rs"><span class="r" data-s="portfolio"><i></i><a href="booklet.html#p8">Exploded view</a><em>p.09</em></span></div></div>
+<div class="t"><a class="b" href="booklet.html#p12" tabindex="-1">F</a><div class="rs"><span class="r" data-s="portfolio"><i></i><a href="booklet.html#p12">Fibre</a><em>p.12</em></span><span class="r" data-s="journal"><i></i><a href="entries/font-selection.html">Font selection</a><em>11-13</em></span></div></div>
+<div class="t"><a class="b" href="booklet.html#p16" tabindex="-1">G</a><div class="rs"><span class="r" data-s="portfolio"><i></i><a href="booklet.html#p16">Greige</a><em>p.16</em></span></div></div>
+<div class="t"><a class="b" href="booklet.html#p4" tabindex="-1">H</a><div class="rs"><span class="r" data-s="portfolio"><i></i><a href="booklet.html#p4">Hand made</a><em>p.04</em></span></div></div>
+<div class="t"><a class="b" href="booklet.html#p2" tabindex="-1">I</a><div class="rs"><span class="r" data-s="portfolio"><i></i><a href="booklet.html#p2">Introduction</a><em>p.02</em></span></div></div>
+<div class="t"><a class="b" href="booklet.html#p10" tabindex="-1">J</a><div class="rs"><span class="r" data-s="portfolio"><i></i><a href="booklet.html#p10">Journey to delivery</a><em>p.10</em></span></div></div>
+<div class="t"><a class="b" href="booklet.html#p14" tabindex="-1">K</a><div class="rs"><span class="r" data-s="portfolio"><i></i><a href="booklet.html#p14">Knit</a><em>p.14</em></span></div></div>
+<div class="t"><a class="b" href="booklet.html#p8" tabindex="-1">L</a><div class="rs"><span class="r" data-s="portfolio"><i></i><a href="booklet.html#p8">Layers</a><em>p.09</em></span></div></div>
+<div class="t"><a class="b" href="booklet.html#p2" tabindex="-1">M</a><div class="rs"><span class="r" data-s="portfolio"><i></i><a href="booklet.html#p2">Mesh</a><em>p.02</em></span></div></div>
+<div class="t"><a class="b" href="booklet.html#p8" tabindex="-1">N</a><div class="rs"><span class="r" data-s="portfolio"><i></i><a href="booklet.html#p8">Non woven</a><em>p.08</em></span><span class="r" data-s="ideas"><i></i><a href="entries/noguchi-study.html">Noguchi study</a><em>11-08</em></span></div></div>
+<div class="t"><a class="b" href="booklet.html#p2" tabindex="-1">O</a><div class="rs"><span class="r" data-s="portfolio"><i></i><a href="booklet.html#p2">Overview</a><em>p.03</em></span><span class="r" data-s="journal"><i></i><a href="entries/olukai-visit.html">OluKai visit</a><em>11-12</em></span></div></div>
+<div class="t"><a class="b" href="entries/portfolio.html" tabindex="-1">P</a><div class="rs"><span class="r" data-s="portfolio"><i></i><a href="entries/portfolio.html">Portfolio 2026–27</a><em>2027</em></span><span class="r" data-s="portfolio"><i></i><a href="booklet.html#p10">Procurement</a><em>p.10</em></span><span class="r" data-s="ideas"><i></i><a href="entries/pebble-typography.html">Pebble typography</a><em>11-08</em></span></div></div>
+<div class="t"><a class="b" href="booklet.html#p10" tabindex="-1">Q</a><div class="rs"><span class="r" data-s="portfolio"><i></i><a href="booklet.html#p10">Quality check</a><em>p.11</em></span></div></div>
+<div class="t"><a class="b" href="booklet.html#p18" tabindex="-1">R</a><div class="rs"><span class="r" data-s="portfolio"><i></i><a href="booklet.html#p18">Render</a><em>p.18</em></span></div></div>
+<div class="t"><a class="b" href="booklet.html#p4" tabindex="-1">S</a><div class="rs"><span class="r" data-s="portfolio"><i></i><a href="booklet.html#p4">Swatches</a><em>p.05</em></span><span class="r" data-s="ideas"><i></i><a href="entries/seaweed-yarn.html">Seaweed yarn</a><em>11-08</em></span><span class="r" data-s="journal"><i></i><a href="entries/shoe-material-callout.html">Shoe material callout</a><em>11-12</em></span></div></div>
+<div class="t"><a class="b" href="booklet.html#p12" tabindex="-1">T</a><div class="rs"><span class="r" data-s="portfolio"><i></i><a href="booklet.html#p12">Texture</a><em>p.12</em></span></div></div>
+<div class="t"><a class="b" href="booklet.html#p8" tabindex="-1">U</a><div class="rs"><span class="r" data-s="portfolio"><i></i><a href="booklet.html#p8">Upper</a><em>p.09</em></span></div></div>
+<div class="t"><a class="b" href="booklet.html#p6" tabindex="-1">V</a><div class="rs"><span class="r" data-s="portfolio"><i></i><a href="booklet.html#p6">Visualization</a><em>p.06</em></span></div></div>
+<div class="t"><a class="b" href="booklet.html#p14" tabindex="-1">W</a><div class="rs"><span class="r" data-s="portfolio"><i></i><a href="booklet.html#p14">Weave</a><em>p.15</em></span></div></div>
+<div class="t"><a class="b" href="booklet.html#p8" tabindex="-1">X</a><div class="rs"><span class="r" data-s="portfolio"><i></i><a href="booklet.html#p8">X-section</a><em>p.09</em></span></div></div>
+<div class="t"><a class="b" href="booklet.html#p6" tabindex="-1">Y</a><div class="rs"><span class="r" data-s="portfolio"><i></i><a href="booklet.html#p6">Yarn</a><em>p.07</em></span></div></div>
+<div class="t"><a class="b" href="booklet.html#p18" tabindex="-1">Z</a><div class="rs"><span class="r" data-s="portfolio"><i></i><a href="booklet.html#p18">Zoom, detail</a><em>p.19</em></span></div></div>
+</div>
+<div class="foot"><span>■ portfolio &nbsp; <b style="color:#dc6e5e">■</b> ideas and concepts &nbsp; □ making journal</span><span>© 2026 Shingo Kawamura · work in progress, updated in increments</span></div>
+<script>
+document.querySelectorAll('.t:not(.off)').forEach(t=>t.addEventListener('click',e=>{if(e.target.closest('a'))return;const a=t.querySelector('.r:not(.m) a, .r.m a')||t.querySelector('a');if(a)location.href=a.href}));
+const bs=document.querySelectorAll('.nav button[data-s]');
+bs.forEach(b=>b.onclick=()=>{bs.forEach(x=>x.classList.remove('on'));b.classList.add('on');const s=b.dataset.s;document.body.classList.toggle('f',s!=='all');
+ document.querySelectorAll('.r').forEach(r=>r.classList.toggle('m',r.dataset.s===s));
+ document.querySelectorAll('.t').forEach(t=>t.classList.toggle('has',!!t.querySelector('.r.m')));if(s!=='all'){const f=document.querySelector('.t.has');if(f)f.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth',block:'center'})}});
+</script><canvas id="fx" aria-hidden="true"></canvas><script>
+(function(){
+const tiles=[...document.querySelectorAll('.t:not(.off)')];
+const cv=document.getElementById('fx'),cx=cv.getContext('2d');
+const still=matchMedia('(prefers-reduced-motion:reduce)').matches&&!/[?&]motion=1/.test(location.search);
+let R=270,rects=[],W=0,H=0,dpr=Math.min(1.5,devicePixelRatio||1);
+function measure(){rects=tiles.map(t=>t.getBoundingClientRect());W=innerWidth;H=innerHeight;R=Math.max(150,Math.min(270,W*.34));cv.width=W*dpr;cv.height=H*dpr;cx.setTransform(dpr,0,0,dpr,0,0)}
+measure();addEventListener('resize',measure);addEventListener('scroll',()=>{rects=tiles.map(t=>t.getBoundingClientRect());kick()},{passive:true});
+const pr=tiles.map(()=>0);
+let tx=W*.5,ty=H*.42,lx=tx,ly=ty,seen=false,active=true,gl=0,last=0,run=false,idleT=0,lastMove=0;
+const dust=[];const N=Math.round(Math.min(240,Math.max(90,W*H/7000)));
+for(let i=0;i<N;i++)dust.push({x:Math.random()*W,y:Math.random()*H,vx:0,vy:0,s:.5+Math.random()*1.1,ph:Math.random()*6.283,sp:.6+Math.random()*2.2});
+const sparks=[];
+function spawn(x,y,vx,vy){if(still)return;for(let i=0;i<2;i++)sparks.push({x:x+(Math.random()-.5)*10,y:y+(Math.random()-.5)*10,vx:vx*.08+(Math.random()-.5)*.8,vy:vy*.08+(Math.random()-.5)*.8-.15,l:1,s:.5+Math.random()*.9});if(sparks.length>140)sparks.splice(0,sparks.length-140)}
+function move(e){seen=true;active=true;lastMove=performance.now();spawn(e.clientX,e.clientY,e.clientX-tx,e.clientY-ty);tx=e.clientX;ty=e.clientY;kick()}
+addEventListener('pointermove',move,{passive:true});addEventListener('pointerdown',move,{passive:true});
+document.addEventListener('pointerleave',e=>{lastMove=-1e9;kick()});
+function kick(){if(!run){run=true;last=performance.now();requestAnimationFrame(frame)}}
+function frame(t){
+  const dt=Math.min(.05,(t-last)/1000||.016);last=t;idleT+=dt;
+  if((!seen||t-lastMove>2500)&&!still){tx=W*(.5+.34*Math.sin(idleT*.35));ty=H*(.45+.26*Math.sin(idleT*.52+1))}
+  lx+=(tx-lx)*Math.min(1,dt*5);ly+=(ty-ly)*Math.min(1,dt*5);
+  gl+=((active?1:0)-gl)*Math.min(1,dt*3);
+  const fl=still?1:1+.045*Math.sin(t*.009)+.03*Math.sin(t*.023+1.3)+.02*Math.sin(t*.057);
+  const rad=R*fl;
+  tiles.forEach((el,i)=>{const r=rects[i];const dx=Math.max(r.left-lx,0,lx-r.right),dy=Math.max(r.top-ly,0,ly-r.bottom);
+    let tp=gl*Math.max(0,1-Math.hypot(dx,dy)/rad);tp=tp*tp*(3-2*tp);
+    pr[i]+=(tp-pr[i])*Math.min(1,dt*6);if(pr[i]<.004&&tp===0)pr[i]=0;
+    const v=pr[i].toFixed(3);if(el._v!==v){el._v=v;el.style.setProperty('--p',v)}});
+  cx.clearRect(0,0,W,H);
+  if(gl>.003){
+    const g=cx.createRadialGradient(lx,ly,0,lx,ly,rad*1.25);
+    g.addColorStop(0,'rgba(255,196,120,'+(.32*gl)+')');g.addColorStop(.35,'rgba(255,150,60,'+(.16*gl)+')');g.addColorStop(1,'rgba(255,120,40,0)');
+    cx.fillStyle=g;cx.fillRect(lx-rad*1.3,ly-rad*1.3,rad*2.6,rad*2.6);
+    for(const d of dust){
+      d.vx+=(Math.random()-.5)*.02;d.vy+=(Math.random()-.5)*.02-.0015;d.vx*=.985;d.vy*=.985;
+      if(!still){d.x+=d.vx+.05*Math.sin(t*.0004+d.ph);d.y+=d.vy}
+      if(d.x<-5)d.x=W+5;if(d.x>W+5)d.x=-5;if(d.y<-5)d.y=H+5;if(d.y>H+5)d.y=-5;
+      const dd=Math.hypot(d.x-lx,d.y-ly)/(rad*1.05);if(dd>=1)continue;
+      const tw=still?.8:.45+.55*Math.sin(t*.001*d.sp+d.ph);
+      const a=Math.min(1,(1-dd)*1.25)*tw*gl;if(a<.02)continue;
+      cx.fillStyle='rgba(255,'+(214+Math.round(30*tw))+','+(150+Math.round(60*tw))+','+a.toFixed(3)+')';
+      const q=d.s*(1+.5*tw);cx.fillRect(d.x-q/2,d.y-q/2,q,q)}
+  }
+  for(let i=sparks.length-1;i>=0;i--){const p=sparks[i];p.l-=dt*.9;if(p.l<=0){sparks.splice(i,1);continue}
+    p.vx+=(Math.random()-.5)*.25;p.vy+=(Math.random()-.5)*.25-.01;p.vx*=.985;p.vy*=.985;p.x+=p.vx;p.y+=p.vy;
+    cx.fillStyle='rgba(255,'+(180+Math.round(60*p.l))+','+(110+Math.round(90*p.l))+','+(Math.min(1,p.l*1.5)*.9).toFixed(3)+')';
+    const q=p.s*(.6+p.l*.6);cx.fillRect(p.x-q/2,p.y-q/2,q,q)}
+  if(active||gl>.003||sparks.length||pr.some(x=>x>0))requestAnimationFrame(frame);else run=false}
+kick();
+})();
+</script></body></html>
