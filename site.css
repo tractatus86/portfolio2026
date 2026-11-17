@@ -113,6 +113,8 @@ dialog button{position:absolute;top:12px;right:16px;background:#111;color:#fff;b
 .cform input::placeholder{color:#777}.cform :focus{outline:none;border-color:#F2F2F0}
 .cform .btn{background:#F2F2F0;color:#111;border:0;cursor:pointer;justify-self:start;margin-top:8px}.cform .btn:hover{background:#fff}
 @media (max-width:860px){.contact{grid-template-columns:minmax(0,1fr)}}
+.contact.cta{display:block;margin-top:var(--s3)}.contact.cta .lead{margin-bottom:var(--s2)}.btn.light{background:#F2F2F0;color:#111}.btn.light:hover{background:#fff}
+main:has(.cta)+.ft{margin-top:0}
 /* diary */
 .filters{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 var(--s2)}
 .dgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(clamp(92px,12vw,200px),1fr));gap:clamp(4px,.5vw,8px)}
