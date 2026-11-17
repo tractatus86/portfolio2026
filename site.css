@@ -54,7 +54,12 @@ h1.big{font-size:clamp(44px,6.4vw,104px);max-width:13ch}
 .btn:hover{background:#000}
 @media (max-width:760px){.signal{grid-template-columns:1fr}}
 .h2big{font:700 clamp(32px,4vw,64px)/1 var(--fig);letter-spacing:-.02em;margin:0 0 var(--s2)}
-.ops .lbl{margin-top:0}
+.rendsec .lbl{margin-top:0}
+.rendrow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s2);align-items:start;margin:0 0 var(--s2)}
+.rendrow img{width:100%;height:auto}
+.rendrow .rc{display:block;font:500 14px/1.35 var(--label);color:var(--ink);margin-top:10px}
+.rendrow .rd{display:block;font:500 14px/1.4 var(--label);color:var(--g1);margin-top:4px;max-width:44ch}
+@media (max-width:900px){.rendrow{grid-template-columns:1fr}}
 .tiles,.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:var(--s2) var(--s1)}
 .tile img,.card img{width:100%;aspect-ratio:4/3;object-fit:cover;background:#f0f0f0;margin-bottom:10px;transition:opacity .2s}
 .tile:hover img,.card:hover img{opacity:.85}
