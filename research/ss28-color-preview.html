@@ -1,0 +1,114 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><meta name="description" content="Shingo Kawamura: textile, CMF and materials. Themes, studies, research and a visual diary. Work in progress."><title>SS28 Color Preview | Shingo Kawamura</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;700&family=Jost:wght@700&family=Red+Hat+Text:wght@400;500&family=Barlow+Condensed:wght@500;700&family=Overpass+Mono&family=Playfair+Display:wght@700&display=swap"><link rel="stylesheet" href="../site.css?v=1"></head><body><header class="hd"><a class="brand" href="../index.html">Shingo Kawamura</a><nav><a class="pill" href="../index.html">Themes</a><a class="pill" href="../studies.html">Studies</a><a class="pill on" href="../research.html">Research</a><a class="pill" href="../lab.html">Post lab</a><a class="pill" href="../diary.html">Visual diary</a><a class="pill" href="../booklet.html">Booklet</a><a class="pill" href="../cave.html">Index</a></nav></header><main><div class="wrap"><p class="lbl">Trend report · Premiere Vision · 2026-11-16</p><h1>SS28 Color Preview</h1><p class="lead">Step 2 of the report-summary process. What the report says, what its data shows (color shift SS26 to SS28, men against women), claims against data, limits, our interpretation, questions for Agent 1.</p><div class="sheet big"><a class="cell wide" href="../media/research/ss28-1.jpg"><img loading="lazy" src="../media/research/ss28-1.jpg" alt="SS28 color preview board page 1"><span>(01)</span></a><a class="cell wide" href="../media/research/ss28-2.jpg"><img loading="lazy" src="../media/research/ss28-2.jpg" alt="SS28 color preview board page 2"><span>(02)</span></a><a class="cell wide" href="../media/research/ss28-3.jpg"><img loading="lazy" src="../media/research/ss28-3.jpg" alt="SS28 color preview board page 3"><span>(03)</span></a><a class="cell wide" href="../media/research/ss28-4.jpg"><img loading="lazy" src="../media/research/ss28-4.jpg" alt="SS28 color preview board page 4"><span>(04)</span></a><a class="cell wide" href="../media/research/ss28-5.jpg"><img loading="lazy" src="../media/research/ss28-5.jpg" alt="SS28 color preview board page 5"><span>(05)</span></a></div><dialog id="lb"><button onclick="lb.close()">Close</button><img id="lbi" alt=""><p id="lbp"></p></dialog><script>document.querySelectorAll(".cell").forEach(a=>a.onclick=e=>{e.preventDefault();lbi.src=a.href;lbp.textContent=a.dataset.cap||"";lb.showModal()});lb.onclick=e=>{if(e.target===lb||e.target===lbi)lb.close()}</script><section class="pair"><div class="body"><p>Inputs used: 01 Extract/data.csv and 01 Extract/source text.md only. Source: Premiere Vision, "SS28 Color Preview: Toward a New Chromatic Fluidity", 22 October 2026, https://www.premierevision.com/en/articles/8f0a0d9f-e9cd-f111-bf5b-6045bd889b2a/preview-couleur-pe-28-vers-une-nouvelle-fluidite-chromatique (as extracted 2026-11-16). Source URL, slides and references/ not opened in this step.</p>
+<p>Labels: FACT = in the data file or computed from it. INTERPRETATION = Agent 2 reading. QUESTION = for Agent 1.</p></div></section><section class="pair"><h2>1. What the report claims (its own words, source text.md, article of 22 Oct 2026)</h2><div class="body"><ul>
+<li>Theme: "MASTERWORKS"; "Shades are moving beyond traditional classifications, while chromatic boundaries are becoming more fluid".</li>
+<li>First palette line: "traces atmospheric flows, driven by a desire for lightness and breathing space"; "blues, greens and purples"; "particular expression in the blue and purple families", "airy, diffused shades are interacting with more assertive pigment intensities".</li>
+<li>Blues: "becoming bolder, more pigmented and less muted"; "Royal blue is making a comeback, slightly desaturated yet vivid and luminous"; "sky blue is gaining depth"; "dark blues receding in favor of brighter, airier and more digital-inspired tones".</li>
+<li>03 Sonar Blue (new): "turquoise blue", "softened and slightly desaturated", "oscillates between blue and green"; "gaining ground in menswear, particularly in summer pieces"; growing "from Brazil to Europe, the United States and especially China".</li>
+<li>Purples: "A luminous, grayish mauve is returning"; "More saturated mauve tones are giving way to a magnetic violet that is vivid, dense and impactful"; "A whitened, muted violet, carried over from Autumn-Winter 2027-28".</li>
+<li>05 Magnetic Violet (new): "a dense, bluish violet"; Heuritech: "strong regional potential", "still relatively understated in womenswear globally", "significant traction in certain markets, particularly India", momentum "extending to the Middle East", also "in menswear".</li>
+</ul></div></section><section class="pair"><h2>2. What the data shows (SS26 to SS28)</h2><div class="body"><p>Method (computed, not printed): Lab values computed by Agent 2 from the measured hex values in data.csv, sRGB to CIE Lab, D65, with C* = sqrt(a<em>^2 + b</em>^2) as chroma and h = hue angle in degrees (about 180 = green, 270 = blue, 300-330 = violet, 0 = red-pink). Python in ~/.hermes/venvs/moodboard. Scratch scripts are not filed; numbers can be recomputed from data.csv.</p>
+<p>Data limits first: the report gives earlier-season swatches (SS26, SS27, AW 27-28) unnamed and only for blues and purples. There is no earlier-season data for greens, so no green shift can be stated. SS28 line: 7 colors (3 blues, 3 greens, 1 violet). The purples evolution shows 3 SS28 swatches, of which only Magnetic Violet is in the 7-color line; Mauve Stoneware and Violine are not in the line list.</p>
+<h3>2a. Computed values, SS28 line (7 colors)</h3>
+<p>Name              hex      L*    C*    h
+  01 Connector Green #65AB6F  64.2  42.5  145
+  02 Halo Blue       #8FACC3  69.0  15.7  253
+  03 Sonar Blue      #008F9C  54.1  31.4  211
+  04 Sky Green       #BDDEDB  86.1  11.6  191
+  05 Magnetic Violet #8C679F  49.2  35.4  316
+  06 Ultra Blue      #005F97  38.6  37.2  267
+  07 Blurred Green   #7DA38E  63.8  18.7  159
+Line mean L* 60.7, C* 27.5.</p>
+<h3>2b. Blues, by season (computed from hex)</h3>
+<p>Season    n  mean L*  mean C*  mean a*  mean b*  darkest L*  swatches with L<em>&lt;35  hue range
+  SS26      4   46.3     33.6     -2.0     -29.5    18.2        1 (#332744)          226-308
+  SS27      5   48.9     19.3     -0.7     -18.2    24.2        2 (#2C3B4A, #1F4B90) 233-284
+  AW 27-28  4   40.8     11.0     -1.2     -10.9    18.5        2                    258-270
+  SS28      3   53.9     28.1    -11.2     -22.7    38.6        0                    211-267
+Individual earlier swatches: SS26 #4FA5BC (L 63.5, C 27.5), #4C7AD2 (52.0, 51.5), #0084B1 (51.5, 34.9), #332744 (18.2, 20.6). SS27 #A5AFB5 (70.9, 4.8), #98C6D9 (77.3, 17.9), #1F4B90 (32.6, 43.9), #495E7B (39.3, 18.8), #2C3B4A (24.2, 11.3). AW #A7BACD (74.7, 12.0), #506780 (42.7, 16.7), #3E4145 (27.4, 2.9), #212E3F (18.5, 12.5).
+FACT, what moves:
+- Count of blue swatches falls 4, 5, 4, 3.
+- Dark blues leave: SS28 has no blue below L</em> 38.6; each earlier season had at least one below L* 33 (18.2, 24.2, 18.5). Navy and ink-blue tones (#332744, #2C3B4A, #212E3F, #3E4145 charcoal) have no SS28 counterpart.
+- Gray-blues leave: the low-chroma blues (C* below 13: #A5AFB5, #2C3B4A, #A7BACD, #3E4145, #212E3F) have no SS28 counterpart. SS28 minimum chroma is 15.7 (Halo Blue).
+- Chroma: mean C* dips from 33.6 (SS26) to 19.3 (SS27) and 11.0 (AW), then returns to 28.1 in SS28. SS28 is more chromatic than the two previous seasons and slightly below SS26.
+- Lightness: SS28 mean L* 53.9 is the highest of the four, but mostly because the dark end is gone; the lightest SS28 blue (Halo, 69.0) is darker than the lightest of SS27 (77.3) and AW (74.7). The light end of the family moves down, the dark end moves up: range narrows from about 18-77 to 39-69.
+- Temperature (hue, a<em>): mean a</em> moves from about -1 or -2 to -11.2, driven by Sonar Blue (a* -27.0, h 211). Violet-leaning blues leave (SS26 #4C7AD2 h 284 and #332744 h 308; SS27 #1F4B90 h 284). SS28 blues lie between h 211 and 267. Net: violet-leaning blues leave, a greener cyan blue arrives. Cooler and greener, not warmer.
+- What arrives: Sonar Blue (new in the report) is the only SS28 blue with no close earlier match (nearest earlier swatch, SS26 #4FA5BC, is dE 12.8 away; computed CIE76). Halo Blue sits near AW #A7BACD (dE 6.9). Ultra Blue sits 15.0 from SS27 #1F4B90 (lighter, grayer: L* 32.6 to 38.6, C* 43.9 to 37.2).
+- SS26 #4C7AD2 (C* 51.5) is the most chromatic blue in the data; nothing in SS28 reaches it (maximum 37.2).</p>
+<h3>2c. Purples, by season (computed from hex)</h3>
+<p>Season    n  mean L*  mean C*  mean a*  darkest L*  hue range
+  SS26      2   60.0     22.4     17.8     50.9        321-352
+  SS27      1   74.5     11.8      6.8     74.5        305
+  AW 27-28  3   42.6     19.1     15.1     19.0        319-325
+  SS28      3   51.7     19.3     14.4     38.6        316 and 3 (Mauve Stoneware)
+Individual: SS26 #B1A6AA (L 69.1, C 4.7), #9967A5 (50.9, 40.1). SS27 #BCB4C9 (74.5, 11.8). AW #B99AB9 (67.2, 20.6), #6F5C71 (41.6, 14.9), #3C2643 (19.0, 21.8). SS28 #AEA0A3 (67.1, 5.6), #8C679F (49.2, 35.4), #66556E (38.6, 16.8).
+FACT:
+- Sample is very small (1 to 3 swatches per season); means are descriptive only.
+- Deep plum leaves: AW #3C2643 (L* 19.0) has no SS28 counterpart; SS28 darkest is Violine at 38.6.
+- Light lavender leaves: SS27 #BCB4C9 (L* 74.5, h 305, the most blue-leaning purple) and AW #B99AB9 (L* 67.2, C* 20.6) have no close SS28 counterpart. The lightest SS28 purple is Mauve Stoneware at L* 67.1 but it is near-neutral (C* 5.6, h 3), not a violet.
+- Arrives: Magnetic Violet (L* 49.2, C* 35.4) is the most chromatic purple since SS26. It is close to SS26 #9967A5 (dE 5.8), so by measurement it is not unprecedented; it is new as a numbered shade.
+- Carried over: Violine #66556E is 4.0 from AW #6F5C71 (near-identical); Mauve Stoneware #AEA0A3 is 2.4 from SS26 #B1A6AA (near-identical).
+- Temperature: SS28 purples span from pinkish gray (h 3) to cool violet (h 316); hue of the violets stays 316-325 across seasons except SS27 (h 305, bluer).</p>
+<h3>2d. Greens</h3>
+<p>FACT: three greens in the SS28 line only: Connector Green (L 64.2, C 42.5, h 145), Blurred Green (63.8, 18.7, h 159), Sky Green (86.1, 11.6, h 191). No earlier-season green data, so what leaves or arrives for greens cannot be stated from this file. Sky Green is the lightest color of the line (L* 86.1).</p>
+<h3>2e. Hue sequence of the SS28 line</h3>
+<p>FACT (computed): ordered by hue angle the line reads 145 Connector Green, 159 Blurred Green, 191 Sky Green, 211 Sonar Blue, 253 Halo Blue, 267 Ultra Blue, 316 Magnetic Violet. The largest gap is 267 to 316 (49 degrees); the others are 14 to 42.</p></div></section><section class="pair"><h2>3. Men against women (Heuritech, as printed and read off charts)</h2><div class="body"><p>All bubble values are read off charts (approximate, see section 5). Growth = "Growth SS28 (%)" axis. Market share = "Market share (%)" axis, values as the axis prints them (fractions such as 0.09), unit unclear (see 5).</p>
+<h3>3a. Sonar Blue</h3>
+<ul>
+<li>Menswear only. Printed: growth SS28 vs SS27 1,33 %, age 16-45. Garment market share (printed, sums 100): Shorts 34, Tops 30, Outerwear 16, Shoes 10, Pants 10.</li>
+<li>Menswear bubbles (growth, share): China 5.2 / 0.052; Europe 3.8 / 0.101; Brazil 2.8 / 0.12; United States 2.2 / 0.091; Middle East 1.7 / 0.12; Worldwide 1.2 / 0.091 (printed 1,33); Southeast Asia -0.8 / 0.111; Japan -0.9 / 0.081; South Korea -2.3 / 0.062; India -7.6 / 0.091.</li>
+<li>Positive growth: 6 of 10 entries (China, Europe, Brazil, US, Middle East, Worldwide). Negative: 4 (Southeast Asia, Japan, South Korea, India).</li>
+<li>Womenswear: no data at all for Sonar Blue (no stats, no chart).</li>
+</ul>
+<h3>3b. Magnetic Violet</h3>
+<ul>
+<li>Womenswear printed: growth SS28 vs SS27 1,7 %, age 16-35. No garment shares printed.</li>
+<li>Menswear: no printed stats, bubble chart only. No age, no growth headline, no garment shares.</li>
+<li>Bubbles menswear (growth / share): Middle East 7.0 / 0.06; United States 0.4 / 0.04; Worldwide -2.0 / 0.04; Southeast Asia -3.4 / 0.05; India -10.9 / 0.04.</li>
+<li>Bubbles womenswear (growth / share): India 4.4 / 0.13; United States 1.2 / 0.05; Worldwide 0.6 / 0.05 (printed 1,7); China -1.2 / 0.03; Southeast Asia -1.7 / 0.06; Europe -2.7 / 0.03; Brazil -9.2 / 0.05.</li>
+<li>Where both exist (United States, Southeast Asia, India, Worldwide), menswear against womenswear, growth: US 0.4 vs 1.2; Southeast Asia -3.4 vs -1.7; India -10.9 vs +4.4; Worldwide -2.0 vs +0.6 (printed womenswear 1,7). Womenswear is higher in all four. India is the sharpest split: strongest womenswear market (also highest share, 0.13) and weakest menswear market (growth -10.9 at share 0.04).</li>
+<li>Market share is low in menswear (0.04 to 0.06) and wider in womenswear (0.03 to 0.13).</li>
+<li>Menswear only region: Middle East (growth 7.0, the highest menswear violet value). Womenswear only regions: China, Europe, Brazil.</li>
+</ul>
+<h3>3c. Gaps (FACT)</h3>
+<ul>
+<li>Sonar Blue: no womenswear data. Magnetic Violet: no menswear age, headline growth or garment shares. Neither color has data on any other new/line color (Connector Green, Sky Green, Blurred Green, Halo, Ultra, Mauve Stoneware, Violine: none has Heuritech data).</li>
+<li>Age bands differ (16-45 and 16-35) and belong to different colors, so they are not a men-against-women comparison for one color.</li>
+<li>Slides print no source, sample size, product count or period for Heuritech data.</li>
+<li>Charts are different in axes between slides (see 5), so bubble positions across charts are not comparable by eye; only the values are.</li>
+</ul></div></section><section class="pair"><h2>4. Report&#x27;s claims against the data</h2><div class="body"><p>Supported by the data:
+- "Dark blues receding": SS28 has none below L* 38.6, earlier seasons 1 to 2 each (2b).
+- "Brighter blues, more pigmented and less muted": SS28 mean C* 28.1 versus 19.3 (SS27) and 11.0 (AW). Holds against the last two seasons; SS26 was 33.6, so versus SS26 it is not more pigmented.
+- "Royal blue slightly desaturated": Ultra Blue C* 37.2 is below SS26 #4C7AD2 (51.5) and SS27 #1F4B90 (43.9). But the report never says which earlier swatch is "royal blue"; the match is ours. "Luminous": L* 38.6 is lighter than SS27 #1F4B90 (32.6) and darker than SS26 (52.0).
+- Sonar "oscillates between blue and green": h 211 sits between Sky Green (191) and Halo Blue (253); this fits. "Softened, slightly desaturated": C* 31.4, below 34.9 (SS26 #0084B1) but no matching previous swatch to compare, so only partly testable.
+- "Luminous, grayish mauve is returning": Mauve Stoneware (L* 67.1, C* 5.6) is near-identical (dE 2.4) to an SS26 swatch, so "returning" fits. By hue it is a pinkish neutral (h 3), more gray than mauve.
+- "More saturated mauve tones giving way to a magnetic violet that is vivid, dense": AW mauves are C* 14.9 to 21.8; Magnetic Violet is 35.4 and darker than AW #B99AB9. Fits.
+- Sonar growth "from Brazil to Europe, the United States and especially China": those four are positive in the read-offs (2.8, 3.8, 2.2, 5.2), China highest.
+- Magnetic Violet "particularly India" (womenswear): India is highest growth (4.4) and highest share (0.13) in womenswear. "Middle East": menswear 7.0, highest menswear value.
+Not supported, partly supported or untestable:
+- "Sky blue is gaining depth": the lightest blue falls from L* 77.3 (SS27) and 74.7 (AW) to 69.0 (Halo Blue), and Halo is similar in chroma, so lower lightness supports "depth"; but the report does not say which swatch is sky blue.
+- "A whitened, muted violet carried over from AW 2027-28": Violine (L* 38.6) is not whitened, it is dark and muted. A lighter candidate is Mauve Stoneware, but it is closer to an SS26 swatch than to an AW one. The report does not tie the phrase to a numbered swatch; not testable.
+- "Magnetic Violet ... still relatively understated in womenswear globally": womenswear Worldwide share reads about 0.05 against India 0.13; low relative to India, but there is no benchmark against other colors. Untestable.
+- "Strong regional potential": regional spread is wide (menswear -10.9 to 7.0; womenswear -9.2 to 4.4), consistent with regional contrast. It does not show the same markets strong in both genders (India reverses). Report text says "also in menswear" without India's negative menswear read-off.
+- "Sonar gaining ground in menswear": the printed Worldwide growth is 1,33 % (small), with 4 of 10 regions negative.
+- "Dark blues receding in favor of ... digital-inspired tones": "digital" is not measurable from the data.
+- "Chromatic boundaries becoming more fluid": the hue sequence (2e) has no break larger than 49 degrees and Sonar fills the 191-253 gap; this is consistent but is not a test, because earlier-season hue spacing for greens is not in the data.</p></div></section><section class="pair"><h2>5. Limits</h2><div class="body"><ul>
+<li>Bubble values are read off by pixel measurement: growth about +/-0.3 points, share about +/-0.002. Not printed numbers.</li>
+<li>p4 (Sonar menswear) x-axis tick labels (0,06 0,08 0,09 0,11 0,13) are unevenly spaced numbers on evenly spaced gridlines; a linear axis was assumed, so Sonar share values are uncertain and may be off more than the stated tolerance. Do not draw conclusions from Sonar share differences of a few hundredths.</li>
+<li>Y tick labels on p4 and on the womenswear chart share the same rounding pattern (even gridlines, rounded labels).</li>
+<li>Overlapping bubbles (Sonar menswear: Brazil/Middle East and United States/Worldwide; violet menswear: United States/Worldwide; violet womenswear: United States/Worldwide and China/Europe) have estimated centers.</li>
+<li>Worldwide is an outline ring. Check: Sonar menswear ring read-off 1.2 against printed 1,33 matches. Magnetic Violet womenswear ring read-off 0.6 against printed 1,7 does not match (1.1 points). Worldwide positions are the least reliable, and violet menswear Worldwide (-2.0) cannot be checked because no menswear headline is printed.</li>
+<li>Axes differ between charts (menswear violet share 0.03-0.07; womenswear 0-0.14; Sonar 0.06-0.13). "Market share (%)" values written as 0.09 etc. leave the unit unclear (fraction or percent); treat as relative position only.</li>
+<li>Growth is described as "SS28 vs SS27" in the printed headline; whether the axis growth is percent or percentage points is not stated.</li>
+<li>Earlier-season swatches are unnamed, so a swatch in SS26 and one in SS28 can be compared only by measured color, not by name; "same color returning" is our reading by dE, not the report's statement. The slide gives only vertical position, not links, for purples.</li>
+<li>Hex are measured from slide swatches (sRGB, no color profile known); screen and print rendering can differ, and PNG swatches are not a lab-measured standard. Lab values are computed with D65 sRGB assumption.</li>
+<li>Only blues and purples have evolution data; greens are not covered. No source, sample size or period is printed for Heuritech.</li>
+<li>Sample sizes per family-season are 1 to 5 swatches; means are descriptive.</li>
+</ul></div></section><section class="pair"><h2>6. Our interpretation (Agent 2; not a trend verdict)</h2><div class="body"><ul>
+<li>Reading of the shift: blues reset from low-chroma, dark and gray-blue neutrals (AW) to clearer mid-tone blues with a greener cyan edge (Sonar) and a mid-dark cobalt (Ultra); the dark end is ceded and the light end becomes a gray-blue (Halo). In practice the SS28 blue story is mid-value, clear, and cooler-greener, not dark-and-moody and not pastel.</li>
+<li>For a CMF designer: if we propose blue textile colors, the data suggests clear mid-value blues in L* 40-70 and C* 15-40 are in line with this report; a navy below L* 30 or a very low-chroma gray-blue would sit outside what the report shows for SS28. This is not a market claim; the report says nothing about navy as a staple.</li>
+<li>Sonar Blue: a teal-leaning blue (h 211) can bridge blue and green in one palette (it sits between Sky Green and Halo Blue). It is the one SS28 color with no close earlier match. For textile, a piece-dyed or yarn-dyed teal blue might be a bridging color between a green and a blue ground; whether it dyes accurately on a given fiber is for Engineering/Lab.</li>
+<li>Magnetic Violet is measurably close to an SS26 swatch (dE 5.8), so "new" is partly naming. Violine and Mauve Stoneware are close to earlier swatches (dE 4.0 and 2.4): the purples line looks more like a reordering and a re-chroma-ing of known purples than a new region of color space. Hypothesis, not tested.</li>
+<li>Gender: the data shows the same violet reading differently by gender (India), which for design means the violet may need a market-specific story, not one global one. Sonar Blue is menswear-led in the report; whether it would travel to womenswear is unknown from this data.</li>
+<li>Fluidity: the hue sequence is nearly continuous from green to violet; one could design combinations by adjacent hues (green to teal to blue). That is a styling idea, not something the data proves.</li>
+<li>Fiber/finish: the report's "airy, diffused, filtered" language points to sheer or low-contrast surfaces (gauze, light-weight woven, tonal heathers). Construction first; heather later. Feasibility is Engineering's.</li>
+</ul></div></section><p class="next"><a class="pill" href="../research.html">All research</a></p></div></main><footer class="ft"><span>Shingo Kawamura · Textile · CMF · 3D · 2026</span><a class="pill" href="../classic.html#access">Request access</a></footer></body></html>
