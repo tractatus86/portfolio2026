@@ -51,7 +51,7 @@
     box(el, L); return el;
   }
   // Reduce Motion (or ?still=1): show the type-only still frame instead of the loop
-  const stillMode = S.stillFrame && ((matchMedia('(prefers-reduced-motion: reduce)').matches && q.get('motion') !== '1') || q.has('still'));
+  const stillMode = S.stillFrame && q.has('still');
   if (stillMode) document.body.classList.add('still');
   const stillSrc = q.get('still') === '2' && S.stillFrameB ? S.stillFrameB : S.stillFrame;
   const quad = stillMode && S.quad && q.get('still') === 'quad';
@@ -87,7 +87,7 @@
   for (let i = 0; i < id.data.length; i += 4) { const v = rnd() * 255; id.data[i] = id.data[i+1] = id.data[i+2] = v; id.data[i+3] = 38; }
   gx.putImageData(id, 0, 0); document.body.style.setProperty('--grain', `url(${g.toDataURL()})`);
 
-  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches && q.get('motion') !== '1';
+  const reduce = false;  // Owner 2026-11-24: always play the loop, even with Reduce Motion on (?still=1 still shows the still)
   let i = q.has('frame') && !stillMode ? (+q.get('frame') % frames.length) : 0;
   const show = n => { frames.forEach((f, k) => f.classList.toggle('on', k === n));
                       document.body.style.setProperty('--gx', (n * 37 % 256) + 'px');
