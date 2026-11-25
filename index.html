@@ -10,12 +10,23 @@
 <style>
 @font-face{font-family:"Anton";src:url(makers/fonts/Anton.woff2) format("woff2");font-display:block}
 :root{--figtree:"Figtree",system-ui,sans-serif;--label:"DIN Alternate","Barlow Condensed",system-ui,sans-serif}
-html,body{margin:0;height:100%;background:#0b0b0b;overflow:hidden}
+html,body{margin:0;background:#0b0b0b}
+.hero{position:relative;height:100svh;overflow:hidden}
 /* square stage that covers the window, like object-fit: cover */
-#stage{position:fixed;left:50%;top:50%;width:max(100vw,100svh);height:max(100vw,100svh);transform:translate(-50%,-50%);
+#stage{position:absolute;left:50%;top:50%;width:max(100vw,100svh);height:max(100vw,100svh);transform:translate(-50%,-50%);
   --u:calc(max(100vw,100svh) / 100);overflow:hidden}
 /* portrait (phones): the square poster sits in the middle, cropped only slightly at the sides */
 @media (orientation:portrait){#stage{width:118vw;height:118vw;--u:1.18vw}}
+body.photo .hero{background:#000}body.photo #stage{background:#000}body.photo #fx{display:none}  /* the Polaroid carries its own grain; no overlay on the black */
+@media (orientation:portrait){body.photo #stage{width:118vw!important;height:118vw!important}}  /* same square as the animation on phones */
+.stillimg{position:absolute;inset:0;background:#000 url(makers/img/still.jpg) 50% 50%/contain no-repeat}  /* Polaroid sits inside the animation's square frame, black around it (Owner 2026-11-18) */
+body.still.quad #stage{left:0;top:0;transform:none;width:100vw!important;height:100svh!important}
+.quad .F{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:clamp(4px,.5vw,8px);background:#8a8886}
+.qp{position:relative;overflow:hidden;container-type:size}
+.qs{position:absolute;width:calc(max(100cqw,100cqh) * var(--z));height:calc(max(100cqw,100cqh) * var(--z));--u:calc(max(100cqw,100cqh) * var(--z) / 100);
+  left:calc(50% - max(100cqw,100cqh) * var(--z) / 2 + var(--dx));top:calc(50% - max(100cqw,100cqh) * var(--z) / 2 + var(--dy))}
+.qp .grid{background-image:linear-gradient(rgba(255,255,255,.14) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.14) 1px,transparent 1px)}
+.still #stage{width:max(100vw,100svh)!important;height:max(100vw,100svh)!important;--u:calc(max(100vw,100svh) / 100)!important}  /* still collage covers the whole hero on every screen */
 .F{position:absolute;inset:0;visibility:hidden}
 .F.on{visibility:visible}
 .L{position:absolute;transform-origin:0 0}
@@ -33,15 +44,37 @@ html,body{margin:0;height:100%;background:#0b0b0b;overflow:hidden}
   background-size:calc(12.5*var(--u)) calc(12.5*var(--u))}
 .line{background:rgba(236,230,216,.55)}
 /* grain + scratches over everything */
-#fx{position:fixed;inset:0;pointer-events:none;background-image:var(--grain);background-position:var(--gx) var(--gy);mix-blend-mode:screen;opacity:.9}
+#fx{position:absolute;inset:0;pointer-events:none;background-image:var(--grain);background-position:var(--gx) var(--gy);mix-blend-mode:screen;opacity:.9}
 #grain{display:none}
 /* site chrome: name and the way in */
-.chrome{position:fixed;inset:0;pointer-events:none;padding:clamp(16px,3.2vw,56px);display:flex;flex-direction:column;justify-content:space-between}
+.chrome{position:absolute;inset:0;pointer-events:none;padding:clamp(16px,3.2vw,56px);display:flex;flex-direction:column;justify-content:space-between}
 .chrome a{pointer-events:auto;text-decoration:none}
 .brand{font:700 18px var(--figtree);color:#f2f2f0}
-.enter{align-self:flex-start;font:500 14px var(--label);color:#111;background:#f2f2f0;border:1px solid #f2f2f0;border-radius:999px;padding:9px 16px}
-.enter:hover{background:transparent;color:#f2f2f0}
 .export .chrome,.export #fx{display:none}
+/* site nav: hidden over the poster, fades in after scrolling past ~60% of it */
+.sitehd{position:fixed;top:0;left:0;right:0;z-index:40;display:flex;flex-wrap:wrap;gap:10px 24px;align-items:center;justify-content:space-between;padding:12px clamp(16px,3.2vw,56px);background:#0a0a0ae8;backdrop-filter:blur(8px);opacity:0;transform:translateY(-100%);transition:opacity .35s,transform .35s;pointer-events:none}
+.sitehd.show{opacity:1;transform:none;pointer-events:auto}
+.sitehd .brand{font:700 18px var(--figtree);color:#f2f2f0;text-decoration:none}
+.sitehd nav{display:flex;flex-wrap:wrap;gap:6px}
+.sitehd .pill{display:inline-block;font:500 14px/1 var(--label);padding:8px 12px;border-radius:999px;background:#2a2a2a;color:#e8e8e6;border:1px solid transparent;text-decoration:none}
+.sitehd .pill:hover{border-color:#f2f2f0}
+@media (max-width:760px){.sitehd nav{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;max-width:100%}.sitehd nav .pill{flex:none}}
+@media (prefers-reduced-motion:reduce){.sitehd{transition:none}}
+/* below the poster: about the site + credits, tall enough to scroll the poster fully away */
+.about{min-height:100svh;box-sizing:border-box;padding:clamp(96px,12vw,200px) clamp(16px,3.2vw,56px) clamp(48px,6vw,96px);color:#bdbdbd;display:flex;flex-direction:column;gap:clamp(64px,9vw,140px)}
+.about .blocks{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(32px,4vw,64px);max-width:1300px}
+.about h2{font:700 clamp(19px,1.5vw,23px)/1.2 "Mixta Pro","Playfair Display",Georgia,serif;color:#f2f2f0;margin:0 0 12px}
+.about p{font:400 17px/1.55 "Red Hat Text",system-ui,sans-serif;margin:0;max-width:48ch}
+.about .lbl{font:500 14px var(--label);color:#8a8a8a;margin:0 0 20px}
+.about ul{list-style:none;margin:0;padding:0;max-width:60ch;font:500 13px/1.6 var(--label);color:#8a8a8a}
+.about ul a{color:inherit;text-decoration:none}.about ul a:hover{color:#f2f2f0}
+.about .ft{font:500 14px var(--label);color:#8a8a8a}
+.about .ab{max-width:62ch}
+.about .ab p{max-width:62ch;margin:0 0 1.1em}
+.about .go{display:inline-block;margin-top:12px;font:500 14px/1 var(--label);padding:10px 16px;border-radius:999px;background:#f2f2f0;color:#111;border:1px solid #f2f2f0;text-decoration:none}
+.about .go:hover{background:transparent;color:#f2f2f0}
+.about .pc .pn{font:400 14px/1.55 "Red Hat Text",system-ui,sans-serif;color:#8a8a8a;max-width:60ch;margin:0 0 32px}
+.export .sitehd,.export .about{display:none}
 /* review guides */
 .guides #stage::before,.guides #stage::after{content:"";position:absolute;z-index:9;pointer-events:none;border:1px dashed #0f0}
 .guides #stage::before{left:27%;right:27%;top:0;bottom:0}
@@ -49,14 +82,29 @@ html,body{margin:0;height:100%;background:#0b0b0b;overflow:hidden}
 </style>
 </head>
 <body>
-<div id="stage" aria-hidden="true"></div>
+<div class="sitehd"><a class="brand" href="index.html">Shingo Kawamura</a><nav><a class="pill" href="scope.html">Scope</a><a class="pill" href="moodboard.html">Atlas</a><a class="pill" href="studies.html">Briefs</a><a class="pill" href="materials.html">Materia</a><a class="pill" href="research.html">Research</a><a class="pill" href="synthesis.html">Synthesis</a><a class="pill" href="booklet.html">Folio</a><a class="pill" href="cave.html">Index</a></nav></div>
+<section class="hero"><div id="stage" aria-hidden="true"></div>
 <div id="fx"></div><canvas id="grain"></canvas>
 <div class="chrome">
-  <a class="brand" href="scope.html">Shingo Kawamura</a>
-  <a class="enter" href="scope.html">Enter</a>
+  <a class="brand" href="index.html">Shingo Kawamura</a>
+</div></section>
+<section class="about">
+<div class="ab">
+<h2>About</h2>
+<p>Shingo Kawamura is a textile and materials designer based in Irvine, California, working across design research and product development.</p>
+<p>This site documents the thinking behind his practice: translating research into product. Its themes trace how our relationship with materials has changed over time, and explore where it might go next.</p>
+<p>The practice continues to evolve alongside new technologies, grounded in the judgment and care that make a material matter to the people who live with it.</p>
+<a class="go" href="scope.html">Begin with Scope</a>
 </div>
+<div class="pc"><p class="lbl">About the poster</p><p class="pn">Makers is a short loop on making and the people who make: archive images from a Roman portrait head to the Apollo 11 launch, set with questions about what it means to make. Every image is public domain or CC0.</p>
+<p class="lbl">Poster image credits</p><ul><li><a href="https://commons.wikimedia.org/wiki/File:Colossal_marble_head_of_the_emperor_Augustus_MET_DP337500.jpg">Colossal marble head of the emperor Augustus</a> · The Met · CC0</li><li><a href="https://commons.wikimedia.org/wiki/File:Gutenberg_press.png">Gutenberg press</a> · International Printing Museum · CC0</li><li><a href="https://commons.wikimedia.org/wiki/File:Steamfitter_MET_DP164571.jpg">Steamfitter</a> · Lewis Hine, The Met · CC0</li><li><a href="https://commons.wikimedia.org/wiki/File:Glen_Beck_and_Betty_Snyder_program_the_ENIAC_in_building_328_at_the_Ballistic_Research_Laboratory.jpg">Glen Beck and Betty Snyder program the ENIAC</a> · US Army · Public domain</li><li><a href="https://commons.wikimedia.org/wiki/File:ENIAC-changing_a_tube.jpg">ENIAC, changing a tube</a> · M. Weik, US Army · Public domain</li><li><a href="https://commons.wikimedia.org/wiki/File:Apollo_11_Launch_-_GPN-2000-000630.jpg">Apollo 11 launch</a> · NASA · Public domain</li><li><a href="https://commons.wikimedia.org/wiki/File:Jacquard_loom_cards.jpg">Jacquard loom cards</a> · Robert-brook · CC0</li><li><a href="https://commons.wikimedia.org/wiki/File:Mechanical_drawing_for_trade_schools_(1909)_(14579121950).jpg">Mechanical drawing for trade schools, 1909</a> · Internet Archive Book Images · No known restrictions</li><li><a href="https://commons.wikimedia.org/wiki/File:Hank_Olen_and_Evelyn_Straus_with_Speed_Graphic.jpg">Hank Olen and Evelyn Straus with a Speed Graphic</a> · Editor & Publisher · Public domain</li><li><a href="https://commons.wikimedia.org/wiki/File:Parthenon_from_Southeast_(3678429645).jpg">Parthenon from the southeast</a> · Cornell University Library · No known restrictions</li></ul></div>
+<div class="ft">Full Stack Design and Development</div>
+</section>
 <h1 style="position:absolute;left:-9999px">Makers. Shingo Kawamura, textile, CMF and materials.</h1>
 <script src="makers/frames.js"></script>
 <script src="makers/makers.js"></script>
+<script>
+(function(){var h=document.querySelector('.sitehd');function f(){h.classList.toggle('show',scrollY>innerHeight*0.6)}addEventListener('scroll',f,{passive:true});addEventListener('resize',f);f()})();
+</script>
 </body>
 </html>

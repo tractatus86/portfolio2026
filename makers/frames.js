@@ -10,6 +10,44 @@
    Safe zone: the window shows at least x 27-73 (phones) and y 19-81 (laptops). */
 window.MAKERS = {
   ms: 200,
+  // Still frame (Owner 2026-11-18): shown instead of the loop when motion is off. Type only, no image.
+  // Four-panel still (Owner reference 2026-11-18): one collage, four palettes and crops, translucent overprint
+  quad: [
+    {ground:'#c79aa3', z:1.15, dx:-4, dy:-6, op:.82, c:{cream:'#ffffff', red:'#ec6a5e', blue:'#6d86e8', yellow:'#fff27a', ink:'#77756f', slate:'#b8a2b3', paper:'#d9c3cc'}},
+    {ground:'#b9b8f2', z:1.6, dx:-22, dy:-10, op:.8, c:{cream:'#ffffff', red:'#f0a8dc', blue:'#c4c6f8', yellow:'#fff7a0', ink:'#86837f', slate:'#9e8ca1', paper:'#e7d9ea'}},
+    {ground:'#373c58', z:1.3, dx:8, dy:14, op:.88, c:{cream:'#7c7a75', red:'#6e3b36', blue:'#3d4569', yellow:'#8f7c45', ink:'#2b2a28', slate:'#575866', paper:'#9a9894'}},
+    {ground:'#5a5652', z:1.05, dx:6, dy:0, op:.85, c:{cream:'#c9aaa2', red:'#8f7868', blue:'#6c8b88', yellow:'#e2876f', ink:'#5f5d5b', slate:'#7a6d6c', paper:'#b9a8a0'}} ],
+  // Version B = the screenshot the Owner sent at 12:06 (dense collage, big red MAKE IT behind the M) + a small yellow accent dot. View with ?still=2
+  stillFrameB: [
+    {t:'shape',k:'grid',x:0,y:0,w:100,h:100},
+    {t:'shape',k:'disc',x:-24,y:74,w:62,h:62,c:'blue'},
+    {t:'shape',k:'disc',x:30,y:8,w:84,h:84,c:'blue'},
+    {t:'shape',k:'paper',x:4,y:6,w:60,h:78,rot:-3,c:'slate'},
+    {t:'text',txt:'MAKE IT',x:10,y:40,s:30,rot:-14,c:'red',op:.9},
+    {t:'shape',k:'bar',x:-4,y:72,w:108,h:4,c:'yellow'},
+    {t:'text',txt:'MAKERS',x:-20,y:-12,s:40,c:'cream',outline:1,op:.7},
+    {t:'text',txt:'MAKERS',x:-46,y:62,s:40,c:'cream',outline:1,op:.7},
+    {t:'text',txt:'MAKERS',x:-8,y:82,s:44,skew:-8,c:'paper',op:.9},
+    {t:'text',txt:'M',x:-14,y:-26,s:96,skew:-6,c:'cream',op:.94},
+    {t:'text',txt:'A',x:42,y:6,s:96,c:'cream',outline:1},
+    {t:'text',txt:'MAKERS',x:50,y:118,s:46,rot:-90,c:'ink',skew:-6},
+    {t:'shape',k:'cross',x:52,y:10,w:30,h:30},
+    {t:'shape',k:'disc',x:40,y:56,w:5,h:5,c:'yellow'} ],
+  stillFrame: [   // collage of 09 + 10 + 12 + 14, type as material, no images. Laptop shows y 19-81, phone x 27-73 of the square.
+    {t:'shape',k:'grid',x:0,y:0,w:100,h:100},
+    {t:'shape',k:'disc',x:-24,y:74,w:62,h:62,c:'blue'},
+    {t:'shape',k:'paper',x:4,y:6,w:60,h:78,rot:-3,c:'slate'},
+    {t:'shape',k:'disc',x:42,y:24,w:42,h:42,c:'blue'},
+    {t:'text',txt:'MAKERS',x:-20,y:-12,s:40,c:'cream',outline:1,op:.7},
+    {t:'text',txt:'MAKERS',x:-46,y:62,s:40,c:'cream',outline:1,op:.7},
+    {t:'text',txt:'MAKERS',x:-8,y:84,s:44,skew:-8,c:'paper',op:.9},
+    {t:'text',txt:'M',x:-14,y:-26,s:96,skew:-6,c:'cream',op:.94},
+    {t:'text',txt:'A',x:46,y:10,s:90,c:'cream',outline:1},
+    {t:'text',txt:'MAKERS',x:74,y:112,s:30,rot:-90,c:'ink',skew:-6},
+    {t:'text',txt:'MAKE IT',x:12,y:42,s:25,rot:-14,c:'red',op:.95},   // reference composition (Owner 2026-11-18)
+    {t:'shape',k:'bar',x:28,y:75,w:50,h:2.6,c:'yellow'},
+    {t:'shape',k:'cross',x:52,y:21,w:26,h:26},
+    {t:'shape',k:'disc',x:66,y:20,w:6,h:6,c:'yellow'} ],
   frames: [
   // 00 MAKERS: bust right, red half-disc, giant word at the bottom
   [ {t:'shape',k:'paper',x:-4,y:6,w:46,h:70,rot:-3,c:'char'},
