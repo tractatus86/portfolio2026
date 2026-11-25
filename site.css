@@ -41,7 +41,7 @@ h1.big{font-size:clamp(44px,6.4vw,104px);max-width:13ch}
 .themes li a{display:block;padding:var(--s1) 0 calc(var(--s2) * .9);transition:opacity .15s}
 .themes li a:hover h2{text-decoration:none;opacity:.6}
 .themes .tc{display:block;font:500 14px var(--label);color:var(--g1);margin-bottom:6px}
-.themes h2{font:700 clamp(22px,2vw,30px)/1.15 var(--fig);letter-spacing:-.01em;margin:0 0 6px}
+.themes h2{font:700 clamp(27px,1.5vw + 21px,42px)/1.1 var(--fig);letter-spacing:-.01em;margin:0 0 8px}
 .themes p{font:400 15px/1.55 var(--body);color:#333;margin:0;max-width:62ch}
 .vword{align-self:stretch;position:relative}
 .vword span{display:block;position:sticky;top:70px;max-height:calc(100svh - 90px);overflow:hidden;writing-mode:vertical-rl;transform:rotate(180deg);font:700 min(calc((100svh - 100px) / 9),13vw)/0.86 var(--fut);letter-spacing:-.01em;white-space:nowrap;color:transparent;-webkit-text-stroke:1.5px #111}
